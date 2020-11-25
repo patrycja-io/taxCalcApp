@@ -11,9 +11,11 @@
 
 <script>
 export default {
-  name: 'Panel',
+  name: "Panel",
   props: {
     headline: String
   }
-}
+};
 </script>
+
+<style lang="scss" src="../assets/styles/Panel.scss"/>
