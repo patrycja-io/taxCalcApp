@@ -10,21 +10,21 @@
     >
 </template>
 <script>
-import { Validator } from "vee-validate";
+import { Validator } from 'vee-validate';
 const validator = new Validator();
 
-data() {
+data(); {
     return {
       validationError: ""
     };
-  },
+  }
   methods: {
-    validate(value) {
+    validate(value); {
       return validator.verify(value, this.validation, {
         name: this.label
       });
-    },
-    async customInput(value) {
+    }
+    async; customInput(value); {
       const { valid, errors } = await this.validate(value);
       if (valid) {
         this.validationError = "";
@@ -36,3 +36,14 @@ data() {
     }
   }
   </script>
+
+  <template>
+...
+ <transition name="alert-in"
+  enter-active-class="animated flipInX"
+  leave-active-class="animated flipOutX">
+   <p v-if="validationError" class="alert" >
+    {{ validationError }}
+   </p>
+ </transition>
+</template>

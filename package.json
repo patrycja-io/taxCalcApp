@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "animation.css": "^0.1.0",
-    "vee-validate": "^3.4.5"
+    "vee-validate": "^3.4.5",
+    "vue-select": "^3.10.8"
   }
 }
