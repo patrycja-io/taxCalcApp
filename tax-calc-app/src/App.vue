@@ -9,7 +9,6 @@
 import Panel from "./components/Panel.vue";
 import InputForm from "./components/InputForm";
 import Result from "./components/Result";
-import { calcTaxes } from "./calc.js";
 export default {
   name: "app",
   components: {
