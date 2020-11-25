@@ -1,22 +1,24 @@
 <template>
+<Panel class="calculator-panel" headline="Income Tax Calculator">
   <div id="app">
     <main>
     </main>
   </div>
+  </Panel>
 </template>
 
 <script>
-import Panel from "./components/Panel.vue";
-import InputForm from "./components/InputForm";
-import Result from "./components/Result";
+import Panel from './components/Panel'
+import InputForm from './components/InputForm'
+import Result from './components/Result'
 export default {
-  name: "app",
+  name: 'app',
   components: {
     Panel,
     InputForm,
     Result
   }
-};
+}
 </script>
 
 export default {

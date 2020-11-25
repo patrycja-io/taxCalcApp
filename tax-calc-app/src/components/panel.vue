@@ -11,9 +11,9 @@
 
 <script>
 export default {
-  name: "Panel",
+  name: 'Panel',
   props: {
-    headline: String,
+    headline: String
   }
-};
+}
 </script>
