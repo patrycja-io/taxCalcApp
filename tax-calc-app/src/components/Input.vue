@@ -35,6 +35,16 @@
 import { Validator } from 'vee-validate';
 const validator = new Validator();
 
+export default {
+  name: "Input",
+  props: {
+    type: String,
+    label: String,
+    validation: String,
+    options: Array,
+    value: [String, Object, Boolean]
+  },
+
 data(); {
     return {
       validationError: ""
