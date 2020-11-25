@@ -8,7 +8,24 @@
       autocomplete="off"
       type="text"
     >
+
+    <transition name="alert-in"
+  enter-active-class="animated flipInX"
+  leave-active-class="animated flipOutX">
+   <p v-if="validationError" class="alert" >
+    {{ validationError }}
+   </p>
+ </transition>
+<v-select
+      v-if="type ==='dropdown'"
+      class="input-dropdown"
+      @input="customInput"
+      :options="options"
+    />
+
 </template>
+
+
 <script>
 import { Validator } from 'vee-validate';
 const validator = new Validator();
@@ -35,15 +52,12 @@ data(); {
       }
     }
   }
-  </script>
 
-  <template>
+  export default {
 ...
- <transition name="alert-in"
-  enter-active-class="animated flipInX"
-  leave-active-class="animated flipOutX">
-   <p v-if="validationError" class="alert" >
-    {{ validationError }}
-   </p>
- </transition>
-</template>
+props {
+     options: Array
+}
+
+</script>
+

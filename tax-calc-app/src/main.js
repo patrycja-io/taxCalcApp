@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import VeeValidate from 'vee-validate'
+import vSelect from 'vue-select'
+
+Vue.component('v-select', vSelect)
 
 Vue.use(VeeValidate)
 
