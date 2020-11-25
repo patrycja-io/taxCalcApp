@@ -24,3 +24,19 @@
     </button>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Result",
+  props: {
+    results: Object
+  },
+  methods: {
+    handleBackClick: function() {
+      this.$emit("clearCalculations");
+    }
+  }
+};
+</script>
+
+<style lang="scss" src="../assets/styles/Result.scss"/>
