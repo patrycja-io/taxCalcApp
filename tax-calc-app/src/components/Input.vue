@@ -8,21 +8,26 @@
       autocomplete="off"
       type="text"
     >
-
-    <transition name="alert-in"
-  enter-active-class="animated flipInX"
-  leave-active-class="animated flipOutX">
-   <p v-if="validationError" class="alert" >
-    {{ validationError }}
-   </p>
- </transition>
-<v-select
+    <v-select
       v-if="type ==='dropdown'"
       class="input-dropdown"
       @input="customInput"
       :options="options"
     />
 
+    <transition
+     name="alert-in"
+     enter-active-class="animated flipInX"
+     leave-active-class="animated flipOutX">
+      <p
+        class="alert"
+        v-if="validationError"
+      >
+        {{ validationError }}
+      </p>
+    </transition>
+
+  </div>
 </template>
 
 
