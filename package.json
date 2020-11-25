@@ -4,6 +4,7 @@
     "sass-loader": "^10.1.0"
   },
   "dependencies": {
-    "animation.css": "^0.1.0"
+    "animation.css": "^0.1.0",
+    "vee-validate": "^3.4.5"
   }
 }
