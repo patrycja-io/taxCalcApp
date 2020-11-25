@@ -45,18 +45,18 @@ export default {
     value: [String, Object, Boolean]
   },
 
-data(); {
+data() {
     return {
       validationError: ""
     };
-  }
+  },
   methods: {
-    validate(value); {
+    validate(value) {
       return validator.verify(value, this.validation, {
         name: this.label
       });
-    }
-    async; customInput(value); {
+    },
+    async customInput(value) {
       const { valid, errors } = await this.validate(value);
       if (valid) {
         this.validationError = "";
@@ -67,12 +67,9 @@ data(); {
       }
     }
   }
-
-  export default {
-...
-props {
-     options: Array
-}
-
+};
 </script>
+
+<style lang="scss" src="../assets/styles/Input.scss"/>
+
 
