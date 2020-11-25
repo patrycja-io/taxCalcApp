@@ -43,7 +43,7 @@ export default {
     }
   }
  computed: {
-    isEnabled: function() {
+    isEnabled: function(){
       return !!Object.values(this.inputs).every(Boolean);
     }
   }
@@ -52,16 +52,6 @@ export default {
       if (input.type === "input") {
         this.incomeValue = input.value;
       }
-    }
-    handleSubmit: function() {
-      const { isInChurch, stateOfResidence, year } = this.inputs;
-      const inputValues = {
-        ...this.inputs,
-        year: year.value,
-        isInChurch: isInChurch.value,
-        stateOfResidence: stateOfResidence.value
-      };
-      this.$emit("submitted", inputValues);
     }
   }
 };
