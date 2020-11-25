@@ -36,26 +36,36 @@ export default {
     return {
       inputs: {
         incomeValue: "",
-        year: "",
+        year: ""
       },
-        year: [{ label: "2018", value: "2018" }],
+      options: {
+        year: [{ label: "2020", value: "2020" }]
       }
-    }
-  }
- computed: {
-    isEnabled: function(){
+    };
+  },
+  computed: {
+    isEnabled: function() {
       return !!Object.values(this.inputs).every(Boolean);
     }
-  }
+  },
   methods: {
     input: function(input) {
       if (input.type === "input") {
         this.incomeValue = input.value;
       }
+    },
+    handleSubmit: function() {
+      const { isInChurch, stateOfResidence, year } = this.inputs;
+      const inputValues = {
+        ...this.inputs,
+        year: year.value,
+        isInChurch: isInChurch.value,
+        stateOfResidence: stateOfResidence.value
+      };
+      this.$emit("submitted", inputValues);
     }
   }
 };
-
 </script>
 
 <style lang="scss" src="../assets/styles/InputForm.scss"/>
